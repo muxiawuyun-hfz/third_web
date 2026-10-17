@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>胡方峥的个人主页</title>
+  <style>
+    /* ===== 基础 ===== */
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      /* 锚点跳转时目标不被导航栏盖住 */
+      scroll-padding-top: 64px;
+    }
+
+    body {
+      margin: 0;
+      padding-top: 64px;
+      /* 给固定导航栏留出高度 */
+      font-family: "Microsoft YaHei", sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #24364b;
+      background: #eef3f9;
+    }
+
+    /* ===== 固定导航栏 ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      background: #ffffff;
+      border-bottom: 1px solid #dde6ef;
+    }
+
+    .nav a {
+      color: #075d9c;
+      text-decoration: none;
+      padding: 4px 2px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav a:hover {
+      border-bottom-color: #075d9c;
+    }
+
+    /* ===== 内容卡片 ===== */
+    main {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 36px;
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(36, 54, 75, .06);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      color: #075d9c;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 22px;
+      color: #123c60;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 19px;
+    }
+
+    /* 只有直接放在 main 下的 h2 才需要上间距 */
+    main>h2 {
+      margin-top: 32px;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    a {
+      color: #0867a6;
+    }
+
+    /* ===== 个人简介 ===== */
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      margin-top: 26px;
+      padding: 26px;
+      background: #f4f8fc;
+      border-radius: 12px;
+    }
+
+    .avatar {
+      flex-shrink: 0;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #cfe6fb, #a4d0f2);
+      color: #075d9c;
+      font-size: 42px;
+      line-height: 96px;
+      text-align: center;
+    }
+
+    /* ===== 爱好列表 ===== */
+    .hobbies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .hobby {
+      flex: 1 1 240px;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      background: #fbfcfe;
+      border: 1px solid #dde6ef;
+      border-radius: 12px;
+    }
+
+    .hobby a {
+      margin-top: auto;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .animation-group,
+    .photo-group,
+    .singer-group{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .animation-group img,
+    .photo-group img,
+    .singer-group img {
+      width: 280px;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    #project-1,
+    #project-2,
+    #project-3 {
+      font-size: 26px;
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    /* ===== 分隔区块 ===== */
+    .details,
+    .contact {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #e4ecf4;
+    }
+
+    footer {
+      margin-top: 28px;
+      text-align: center;
+      color: #7b8ea3;
+      font-size: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <a href="#home">首页</a>
+    <a href="#about">关于我</a>
+    <a href="#hobby">我的爱好</a>
+    <a href="#contact">联系我</a>
+  </nav>
+
+  <main>
+    <header id="home">
+      <h1>Welcome</h1>
+    </header>
+
+    <section class="profile" id="about">
+      <div class="avatar">神</div>
+      <div>
+        <h2>你好，我是胡方峥</h2>
+        <p>大数据专业学生，貌似被大数据精准拿捏……</p>
+        <p>从从容容还是连滚带爬？Who cares！</p>
+      </div>
+    </section>
+
+    <h2 id="hobby">我的爱好</h2>
+    <section class="hobbies">
+      <article class="hobby">
+        <h3>动漫</h3>
+        <p>人总得爱着些什么</p>
+        <a href="#project-1">瞧一瞧</a>
+      </article>
+      <article class="hobby">
+        <h3>摄影</h3>
+        <p>留存此刻升温的光线和弥漫的烟</p>
+        <a href="#project-2">看一看</a>
+      </article>
+      <article class="hobby">
+        <h3>听歌</h3>
+        <p>年少时的苹果醋，长大后的八加一</p>
+        <a href="#project-3">内藏乾坤</a>
+      </article>
+    </section>
+
+    <section class="details">
+      <h2>兴趣图鉴</h2>
+      <h3 id="project-1">动漫</h3>
+      <div class="animation-group">
+        <img src="img_dongman/animation_1.jpg" alt="精选动漫图片">
+        <img src="img_dongman/animation_2.png" alt="精选动漫图片" style="object-position:right center">
+        <img src="img_dongman/animation_3.jpg" alt="精选动漫图片">
+        <img src="img_dongman/animation_4.jpg" alt="精选动漫图片">
+        <img src="img_dongman/animation_5.jpg" alt="精选动漫图片">
+        <img src="img_dongman/animation_6.jpg" alt="精选动漫图片">
+        <img src="img_dongman/animation_7.jpg" alt="精选动漫图片">
+        <img src="img_dongman/animation_8.jpg" alt="精选动漫图片">
+        <img src="img_dongman/animation_9.jpg" alt="精选动漫图片">
+      </div>
+
+      <h3 id="project-2">摄影</h3>
+      <div class="photo-group">
+        <img src="img_sheying/photo_1.jpg" alt="照片">
+        <img src="img_sheying/photo_2.jpg" alt="照片">
+        <img src="img_sheying/photo_3.jpg" alt="照片">
+        <img src="img_sheying/photo_4.jpg" alt="照片">
+        <img src="img_sheying/photo_5.jpg" alt="照片">
+        <img src="img_sheying/photo_6.jpg" alt="照片">
+        <img src="img_sheying/photo_7.jpg" alt="照片">
+        <img src="img_sheying/photo_8.jpg" alt="照片">
+        <img src="img_sheying/photo_9.jpg" alt="照片">
+      </div>
+
+      <h3 id="project-3">听歌</h3>
+
+      <div class="singer-group">
+        <img src="img_tingge/1.png" alt="歌手">
+        <img src="img_tingge/2.png" alt="歌手">
+        <img src="img_tingge/3.png" alt="歌手">
+      </div>
+    </section>
+
+
+
+    <section class="contact" id="contact">
+      <h2>联系我</h2>
+      <p>车马尘嚣中我们窃窃私语</p>
+      <p>邮箱：<a href="mailto:2589345978@qq.com">2589345978@qq.com</a><br>
+        QQ：<a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2589345978&website=www.oicqzone.com">2589345978</a></p>
+    </section>
+
+    <footer>为3d的我创造一张2d名片</footer>
+  </main>
+
+</body>
+
+</html>
